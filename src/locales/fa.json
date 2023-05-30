@@ -1,0 +1,55 @@
+{
+  "header": {
+    "prefixLogo": "پنل ",
+    "postfixLogo": "کاربری"
+  },
+  "sidebar": {
+    "dashboard": "میزکار",
+    "todos": "لیست کارها",
+    "weather": "آب و هوا",
+    "profile": "پروفایل"
+  },
+  "profile": {
+    "subtitle": "شخصی سازی کاربری",
+    "themes": "تغییر رنگ",
+    "language": "زبان"
+  },
+  "weather": {
+    "subtitle": "گزارش وضعیت آب و هوا بر اساس نام شهر",
+    "placeholder": "یک شهر را وارد کنید",
+    "temp": "درجه",
+    "clearStatus": "صاف",
+    "windyStatus": "همراه با باد",
+    "empty": "برای نمایش اطلاعات ابتدا نام یک شهر را وارد کنید"
+  },
+  "todos": {
+    "subtitle": "مدیریت لیست کار ها",
+    "searchInput": "جستوجو بر اساس نام",
+    "title": "عنوان",
+    "createdAt": "تاریخ",
+    "status": "وضعیت",
+    "actions": "عمل ها",
+    "empty": "آیتمی وجود ندارد",
+    "createNewBtn": "ساختن جدید"
+  },
+  "taskFrom": {
+    "addNew": "اضافه کردن تسک جدید",
+    "updateTask": "ویرایش تسک",
+    "searchInput": "جستوجو بر اساس نام",
+    "title": "عنوان",
+    "deleteTaskTitle": "مطمئن هستید که میخواهید تسک را حذف کنید؟",
+    "deleteTaskContent": "تسک به طور کامل از بین تسک های شما حذف میشود",
+    "cancelBtn":"لغو",
+    "updateBtn":"ویرایش",
+    "createBtn":"ساختن",
+    "yesBtn":"بله",
+    "noBtn":"خیر"
+  },
+  "dashboard": {
+    "subtitle": "نمایش اطلاعات کاربر",
+    "welcome": "خوش آمدیدی ",
+    "usernameLabel": "نام کاربری",
+    "usernamePlaceholder": "نام کاربری خود را وارد کنید",
+    "submitButton": "اعمال"
+  }
+}

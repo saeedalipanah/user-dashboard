@@ -1,0 +1,55 @@
+{
+  "header": {
+    "prefixLogo": "USER",
+    "postfixLogo": "DASHBOARD"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "todos": "Todo List",
+    "weather": "Weather",
+    "profile": "Profile"
+  },
+  "profile": {
+    "subtitle": "User Personalize",
+    "themes": "Themes",
+    "language": "Language"
+  },
+  "weather": {
+    "subtitle": "Weather forcast based on city name",
+    "placeholder": "Enter an City",
+    "temp": "°c",
+    "clearStatus": "Clear",
+    "windyStatus": "Windy",
+    "empty": "Enter an city to show data !"
+  },
+  "todos": {
+    "subtitle": "Todo list manegment",
+    "searchInput": "Search tasks",
+    "title": "Title",
+    "createdAt": "Created at",
+    "status": "Status",
+    "actions": "Actions",
+    "empty": "Empty !",
+    "createNewBtn": "Create new"
+  },
+  "taskFrom": {
+    "addNew": "Create new task",
+    "updateTask": "Update Task",
+    "searchInput": "Search tasks",
+    "title": "Title",
+    "deleteTaskTitle": "Are you sure delete this task?",
+    "deleteTaskContent": "task will be completely Remove from your tasks",
+    "cancelBtn": "Cancel",
+    "updateBtn": "Update",
+    "createBtn": "Create",
+    "yesBtn": "Yes",
+    "noBtn": "No"
+  },
+  "dashboard": {
+    "subtitle": "User informations",
+    "welcome": "Welcome",
+    "usernameLabel": "Username",
+    "usernamePlaceholder": "Enter your username",
+    "submitButton": "Submit"
+  }
+}

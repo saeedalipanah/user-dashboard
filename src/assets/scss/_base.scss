@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial,
+    Noto Sans, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', Segoe UI Symbol,
+    'Noto Color Emoji', sans-serif;
+}
+body {
+  background: var(--primary-color) !important;
+}
+//main
+.main {
+  margin-left: clamp(200px, 30%, 350px);
+  margin-top: 80px;
+  padding: 0 20px;
+  padding-top: 10px;
+  min-height: 100vh;
+  @include md {
+    margin-left: auto !important;
+  }
+}
+//main
+
+//modals in dark theme
+:root{
+  &.dark-theme{
+    .ant-modal-content{
+      background: var(--primary-color);
+    }
+  }
+}
+//modals in dark theme
+
+//site rtl direction styles
+html {
+  &.fa {
+    direction: rtl;
+    .sidebar{
+      right: 0;
+      border: none;
+      border-left: 1px solid var(--third-color);
+        .router-link {
+          a {
+            &.router-link-active,
+            &.router-link-exact-active,
+            &:active {
+              div {
+                border: none;
+                border-left: 5px solid var(--secondary-color);
+              }
+            }
+          }
+      }
+    }
+    .main  {
+      margin-left: 0;
+      margin-right: clamp(200px, 30%, 350px);
+      @include md {
+        margin-right: 0 !important;
+      }
+    }
+    .footer{
+      padding-left: 0;
+      padding-right: clamp(200px, 30%, 350px);
+      @include md {
+        padding-right: 0 ;
+      }
+    }
+  }
+}
+//site rtl direction styles
+
+//scroolbar
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-track {
+  // background-color: var(--color1);
+}
+//scroolbar
+
+
+//router transition
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.3s ease;
+}
+
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+//router transition
+
+//and design customization
+.antd-full-modal {
+  .ant-modal {
+    max-width: 100%;
+    top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+  .ant-modal-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh);
+  }
+  .ant-modal-body {
+    flex: 1;
+  }
+}
+
+.ant-switch {
+  background-color: rgb(0, 0, 0) !important;
+  &-checked {
+    background-color: rgb(233, 233, 233) !important;
+  }
+}
+
+.ant-page-header{
+  border: 1px solid #ebedf0 !important;
+}
+
+.ant-page-header-heading-title,.ant-page-header-back-button{
+  color: var(--secondary-color) !important;
+}
+.ant-page-header-heading-sub-title{
+  color: grey !important;
+}
+//and design customization
+
+//shorthands
+.t-c{
+  color: var(--text-color);
+}
+.fit-height{
+  min-height: 80vh;
+}
+.d-flex{
+  display: flex;
+}
+.flex-col{
+  flex-direction: column;
+}
+.align-center{
+  align-items: center;
+}
+.justify-center{
+  justify-content: center;
+}
+label,p,h3{
+  color: var(--text-color) !important;
+}
+h3 {
+  margin: 0;
+}
+
+//shorthands
+
+
+
+
