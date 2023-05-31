@@ -37,13 +37,13 @@ const onFinish = (values: {username:string}) => {
       :rules="[{ required: true, message: 'Please input your username!' }]"
       class="username-form"
     >
-      <a-input v-model:value="formState.username" :placeholder="t('dashboard.usernamePlaceholder')" id="username-input"  >
+      <a-input v-model:value="formState.username" :placeholder="t('dashboard.usernamePlaceholder')" class="username-input"  >
         <template #prefix><UserOutlined style="color: rgba(0, 0, 0, 0.25)" /></template>
       </a-input>
     </a-form-item>
 
     <a-form-item :wrapper-col="{ offset: 9, span: 16 }">
-      <a-button class="sub-btn" type="primary" html-type="submit">{{t('dashboard.submitButton')}}</a-button>
+      <a-button class="submit-btn" type="primary" html-type="submit">{{t('dashboard.submitButton')}}</a-button>
     </a-form-item>
   </a-form>
   </div>

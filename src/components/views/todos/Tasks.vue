@@ -61,7 +61,7 @@ onMounted(() => {
       <!-- search input -->
       <!-- add task button -->
       <a-tooltip :title="t('todos.createNewBtn')" color="green">
-        <a-button type="" shape="circle" @click="showAddModal">+</a-button>
+        <a-button shape="circle" @click="showAddModal">+</a-button>
       </a-tooltip>
       <!-- add task button -->
     </div>
