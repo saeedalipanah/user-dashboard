@@ -22,6 +22,14 @@ const filterOption = (input: string, option: optionT) => {
   return option.value.toUpperCase().indexOf(input.toUpperCase()) >= 0
 }
 
+const windStatus = computed<string>(() => {
+  return fetchedData.value
+    ? fetchedData.value.windspeed > 10
+      ? t('weather.windyStatus')
+      : t('weather.clearStatus')
+    : ''
+})
+
 const onSelect = () => {
   isLoading.value = true
   //get date from database(api) based on city name
@@ -39,7 +47,7 @@ const onSelect = () => {
 
 <template>
   <div>
-      <!-- search an city -->
+    <!-- search an city -->
     <a-row type="flex" justify="center" style="margin-top: 50px">
       <a-col :span="24" :md="16" style="display: flex; justify-content: center">
         <a-auto-complete
@@ -59,9 +67,9 @@ const onSelect = () => {
         </a-auto-complete>
       </a-col>
     </a-row>
-      <!-- search an city -->
+    <!-- search an city -->
 
-      <!-- fetched informations -->
+    <!-- fetched informations -->
     <a-row type="flex" justify="center">
       <a-col :span="24" :md="16">
         <!-- if has an response at leaset -->
@@ -69,9 +77,11 @@ const onSelect = () => {
           <section class="informations">
             <h1 class="w-city-name">{{ enteredCity }}</h1>
             <date-formatter></date-formatter>
-            <h1 class="w-temp">{{ fetchedData.temperature }} {{ t('weather.temp') }}</h1>
+            <h1 class="w-temp">
+              {{ fetchedData ? fetchedData.temperature : '' }} {{ t('weather.temp') }}
+            </h1>
             <h3 class="w-status">
-              {{ fetchedData.windspeed > 10 ? t('weather.windyStatus') : t('weather.clearStatus') }}
+              {{ windStatus }}
             </h3>
           </section>
         </div>
@@ -84,6 +94,6 @@ const onSelect = () => {
         <!-- nothing until now -->
       </a-col>
     </a-row>
-      <!-- fetched informations -->
+    <!-- fetched informations -->
   </div>
 </template>
