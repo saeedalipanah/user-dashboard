@@ -1,15 +1,12 @@
 <script setup lang="ts">
 // components
 import TaskFrom from './TaskFrom.vue'
-// components
 
 // icons
 import { ExclamationCircleOutlined } from '@ant-design/icons-vue'
-// icons
 
 // types
 import type { taskT } from '@/types'
-// types
 
 import { computed, ref, createVNode, type PropType } from 'vue'
 import { Modal } from 'ant-design-vue'

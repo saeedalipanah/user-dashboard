@@ -1,12 +1,13 @@
 <script setup lang="ts">
+// types
+import type { FormInstance } from 'ant-design-vue'
+import { taskT } from '@/types'
+
 import { reactive, ref, toRaw, type PropType } from 'vue'
 import { useTaskStore } from '@/stores/tasks'
 import { useI18n } from 'vue-i18n'
 
-// types
-import type { FormInstance } from 'ant-design-vue'
-import { taskT } from '@/types'
-// types
+
 const { t } = useI18n()
 const store = useTaskStore()
 const emit = defineEmits(['submitted', 'canceled'])

@@ -3,7 +3,6 @@
 import NewUser from './NewUser.vue'
 import UserInfo from './UserInfo.vue'
 import Clock from './Clock.vue'
-// component
 
 import { useProfileStore } from '@/stores/profile'
 import { computed, onMounted } from 'vue'

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // andv icons
 import { UserOutlined } from '@ant-design/icons-vue';
-// andv icons
 
 import { useProfileStore } from '@/stores/profile';
 import { reactive } from 'vue'

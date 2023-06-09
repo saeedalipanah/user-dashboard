@@ -1,10 +1,9 @@
 <script setup lang="ts">
 // types
 import type { optionT, optionsT, weatherT } from '@/types'
-// types
+
 // components
 import DateFormatter from '@/components/common/DateFormatter.vue'
-// components
 
 import { useI18n } from 'vue-i18n'
 import { computed, ref } from 'vue'
@@ -22,7 +21,7 @@ const filterOption = (input: string, option: optionT) => {
   return option.value.toUpperCase().indexOf(input.toUpperCase()) >= 0
 }
 
-const windStatus = computed<string>(() => {
+const windStatusHandler = computed<string>(() => {
   return fetchedData.value
     ? fetchedData.value.windspeed > 10
       ? t('weather.windyStatus')
@@ -38,8 +37,6 @@ const onSelect = async () => {
     fetchedData.value = result
     hasResponse.value = true
   } finally {
-    console.log('finally');
-    
     isLoading.value = false
   }
 }
@@ -81,7 +78,7 @@ const onSelect = async () => {
               {{ fetchedData ? fetchedData.temperature : '' }} {{ t('weather.temp') }}
             </h1>
             <h3 class="w-status">
-              {{ windStatus }}
+              {{ windStatusHandler }}
             </h3>
           </section>
         </div>

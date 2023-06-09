@@ -2,13 +2,12 @@
 // components
 import TaskItem from './TaskItem.vue'
 import TaskFrom from './TaskFrom.vue'
-// components
+
 // types
 import type { tasksT, taskT } from '@/types'
-// types
+
 // icons
 import { SearchOutlined } from '@ant-design/icons-vue'
-// icons
 
 import { ref, computed, onMounted } from 'vue'
 import { useTaskStore } from '@/stores/tasks'

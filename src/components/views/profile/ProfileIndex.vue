@@ -3,7 +3,7 @@
 import ToggleTheme from '@/components/views/profile/ToggleTheme.vue'
 import LanguageMenu from '@/components/views/profile/LanguageMenu.vue'
 import NewUser from '@/components/views/dashboard/NewUser.vue'
-// components
+
 import { useI18n } from 'vue-i18n'
 const {t}  = useI18n()
 </script>

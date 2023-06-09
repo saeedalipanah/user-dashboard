@@ -3,7 +3,7 @@
 import Sidebar from './Sidebar.vue'
 import Logo from '../common/Logo.vue'
 import RouterLinks from '../common/RouterLinks.vue'
-// components
+
 import { ref } from 'vue'
 
 const visible = ref<boolean>(false)
