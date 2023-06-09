@@ -30,18 +30,18 @@ const windStatus = computed<string>(() => {
     : ''
 })
 
-const onSelect = () => {
+const onSelect = async () => {
   isLoading.value = true
-  //get date from database(api) based on city name
-  store
-    .fetchWeatherData(enteredCity.value)
-    .then((result: weatherT) => {
-      fetchedData.value = result
-      hasResponse.value = true
-    })
-    .finally(() => {
-      isLoading.value = false
-    })
+  try {
+    //get date from database(api) based on city name
+    const result: weatherT = await store.fetchWeatherData(enteredCity.value)
+    fetchedData.value = result
+    hasResponse.value = true
+  } finally {
+    console.log('finally');
+    
+    isLoading.value = false
+  }
 }
 </script>
 
