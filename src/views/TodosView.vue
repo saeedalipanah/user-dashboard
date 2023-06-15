@@ -3,8 +3,8 @@
 import TodosIndex from '@/components/views/todos/TodosIndex.vue'
 // components
 import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
-const {t}  = useI18n()
+import { i18n } from '@/composables/I18nCompose'
+const {t}  = i18n()
 const router = useRouter()
 </script>
 

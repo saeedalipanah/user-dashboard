@@ -4,8 +4,8 @@ import ToggleTheme from '@/components/views/profile/ToggleTheme.vue'
 import LanguageMenu from '@/components/views/profile/LanguageMenu.vue'
 import NewUser from '@/components/views/dashboard/NewUser.vue'
 
-import { useI18n } from 'vue-i18n'
-const {t}  = useI18n()
+import { i18n } from '@/composables/I18nCompose'
+const {t}  = i18n()
 </script>
 
 <template>

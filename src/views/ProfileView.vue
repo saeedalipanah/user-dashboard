@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
+import { i18n } from '@/composables/I18nCompose'
 import ProfileIndex from '@/components/views/profile/ProfileIndex.vue'
 import { useRouter } from 'vue-router'
-const { t } = useI18n()
+const { t } = i18n()
 const router = useRouter()
 </script>
 

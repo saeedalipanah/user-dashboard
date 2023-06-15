@@ -5,7 +5,7 @@ import Footer from './components/containers/Footer.vue'
 //components
 
 import { onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { i18n } from '@/composables/I18nCompose'
 import { useLocaleStore } from '@/stores/locale'
 import { useThemesStore } from '@/stores/themes'
 // define stores
@@ -13,7 +13,7 @@ const store = useLocaleStore()
 const themesStore = useThemesStore()
 // define stores
 
-const { locale } = useI18n({ useScope: 'global' }) //i18n locale variable
+const { locale } = i18n({ useScope: 'global' }) //i18n locale variable
 onMounted(() => {
   store.setLocale(locale.value) //set site language in refresh
 

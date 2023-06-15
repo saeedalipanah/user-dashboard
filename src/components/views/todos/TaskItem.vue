@@ -11,8 +11,9 @@ import type { taskT } from '@/types'
 import { computed, ref, createVNode, type PropType } from 'vue'
 import { Modal } from 'ant-design-vue'
 import { useTaskStore } from '@/stores/tasks'
-import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
+
+import { i18n } from '@/composables/I18nCompose'
+const { t } = i18n()
 const store = useTaskStore()
 const props = defineProps({
   task: {

@@ -24,7 +24,7 @@ export const useTaskStore = defineStore('tasks', () => {
 
   //create task and sat to storage
   const createTask = (newTask: taskT) => {
-    tasks.value.push(newTask)
+    tasks.value.unshift(newTask)
     setTasks(tasks.value)
     store.openNotification('success', 'Successfuly', 'Your task created successfuly.')
   }

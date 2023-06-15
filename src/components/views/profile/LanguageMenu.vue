@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import {  watch,  } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { watch } from 'vue'
+
+import { i18n } from '@/composables/I18nCompose'
 import { useLocaleStore } from '@/stores/locale'
 const store = useLocaleStore()
-const { locale } = useI18n({ useScope: 'global' }) //i18n locale variable
-watch(locale, (v) => {
+const { locale } = i18n({ useScope: 'global' }) //i18n locale variable
+watch(locale, (v: string) => {
   store.setLocale(v) //set new selected locale on store and storage
 })
 </script>

@@ -11,10 +11,9 @@ import { SearchOutlined } from '@ant-design/icons-vue'
 
 import { ref, computed, onMounted } from 'vue'
 import { useTaskStore } from '@/stores/tasks'
-import { useI18n } from 'vue-i18n'
-
+import { i18n } from '@/composables/I18nCompose'
 const store = useTaskStore()
-const { t } = useI18n()
+const { t } = i18n()
 const tasks = computed<tasksT>(() => store.tasks)
 const enteredSearch = ref<string>('')
 let filteredTasks = ref<tasksT>([])
@@ -67,10 +66,10 @@ onMounted(() => {
     <!-- search bar -->
     <!-- tasks -->
     <ul class="fit-height" v-if="tasks && tasks.length">
-      <task-item v-for="(task, i) in enteredSearch ? filteredTasks : tasks" :key="i" :task="task" />
+      <task-item v-for="(task) in enteredSearch ? filteredTasks : tasks" :key="task.id" :task="task" />
     </ul>
-    <div class="fit-height d-flex justify-center align-center" v-else>
-      <h1>{{ t('todos.empty') }}</h1>
+    <div class="fit-height d-flex justify-center align-center"  v-else>
+      <h1 style="color:var(--text-color)">{{ t('todos.empty') }}</h1>
     </div>
     <!-- tasks -->
 

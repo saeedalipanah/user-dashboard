@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
+import { i18n } from '@/composables/I18nCompose'
+const { t } = i18n()
 const emit = defineEmits(['close'])
 type linksT = {
   name: string

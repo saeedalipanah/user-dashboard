@@ -4,11 +4,10 @@ import type { optionT, optionsT, weatherT } from '@/types'
 
 // components
 import DateFormatter from '@/components/common/DateFormatter.vue'
-
-import { useI18n } from 'vue-i18n'
+import { i18n } from '@/composables/I18nCompose'
 import { computed, ref } from 'vue'
 import { useWeatherStore } from '@/stores/weather'
-const { t } = useI18n()
+const { t } = i18n()
 const store = useWeatherStore()
 const enteredCity = ref<string>('')
 const isLoading = ref<boolean>(false)

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { useProfileStore } from '@/stores/profile'
 import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { i18n } from '@/composables/I18nCompose'
 const store = useProfileStore()
 const username = computed<string>(() => store.username)
-const { t } = useI18n()
+const { t } = i18n()
 </script>
 
 <template>
