@@ -23,7 +23,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <navbar></navbar>
+  <navbar></navbar>a
+  <h1>hello world</h1>
   <main class="main">
     <a-config-provider :direction="locale === 'en' ? 'ltr' : 'rtl'">
       <router-view v-slot="{ Component }">
