@@ -5,6 +5,5 @@ import RouterLinks from '../common/RouterLinks.vue';
 <template>
   <aside class="sidebar">
     <router-links></router-links>
-    <h1>helllooooo</h1>
   </aside>
 </template>
