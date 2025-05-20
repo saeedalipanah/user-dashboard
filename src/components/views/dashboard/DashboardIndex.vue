@@ -24,6 +24,6 @@ onMounted(() => {
     <user-info v-else></user-info>
 
     <!-- provide and inject test for custom event -->
-    <button @click="onButtonClickTest(payload)">test the emit</button>
+    <!-- <button @click="onButtonClickTest(payload)">test the emit</button> -->
   </div>
 </template>
